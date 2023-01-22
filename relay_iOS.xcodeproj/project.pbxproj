@@ -13,6 +13,7 @@
 		3F34FE67296C3F93009A8008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE65296C3F93009A8008 /* Main.storyboard */; };
 		3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE68296C3F94009A8008 /* Assets.xcassets */; };
 		3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE6A296C3F94009A8008 /* LaunchScreen.storyboard */; };
+		3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3F34FE68296C3F94009A8008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F34FE6B296C3F94009A8008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F34FE6D296C3F94009A8008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMyTraceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		3F34FE53296C3F93009A8008 = {
 			isa = PBXGroup;
 			children = (
+				3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */,
 				3F34FE5E296C3F93009A8008 /* relay_iOS */,
 				3F34FE5D296C3F93009A8008 /* Products */,
 			);
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */,
 				3F34FE64296C3F93009A8008 /* ViewController.swift in Sources */,
 				3F34FE60296C3F93009A8008 /* AppDelegate.swift in Sources */,
 				3F34FE62296C3F93009A8008 /* SceneDelegate.swift in Sources */,
