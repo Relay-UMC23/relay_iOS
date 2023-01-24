@@ -27,7 +27,7 @@ class TrackMyTraceViewController: UIViewController {
         MapView.showsUserLocation = true
         // 현재 내 위치 기준으로 지도를 움직임.
         self.MapView.setUserTrackingMode(.follow, animated: true)
-
+        
         self.MapView.isZoomEnabled = true
         self.MapView.delegate = self
     }
