@@ -5,26 +5,45 @@ import CoreLocation
 //지도와 위치권한은 상관이 없다, 현재위치등을 표현하고 싶다면 권한필요
 // 중심, 범위 지정, 핀(어노테이션)
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var btnShowPopup: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-    
+    var num : Int = 0
     //location 2. 위치에 대한 대부분을 담당
-    let locationManager = CLLocationManager()
+    lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.startUpdatingLocation()
+        manager.delegate = self
+        return manager
+     }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //location 3. 프로토콜 연결
-        locationManager.delegate = self
+        btnShowPopup.setTitle("시간", for: .normal)
+        btnShowPopup.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
         self.mapView.mapType = MKMapType.standard
-        
+        mapView.showsUserLocation = true
         self.mapView.setUserTrackingMode(.follow, animated: true)
         self.mapView.isZoomEnabled = true
-//        checkUserDeviceLocationServiceAuthorization() //앱실행시 호출되므로 따로 함수 호출안하고 제거해도됨.
-        let center = CLLocationCoordinate2D(latitude: 37.517829, longitude: 126.886270)
-        setRegionAndAnnotation(center: center)
+        self.mapView.delegate = self
         
+    }
+    @objc func showPopup() {
+        guard let popupViewController = CustomPopupView.instantiate() else { return }
+        popupViewController.delegate = self
+        popupViewController.rnum = num
+        let popupVC = PopupViewController(contentController: popupViewController, position: .bottom(0), popupWidth: self.view.frame.width, popupHeight: 300)
+        popupVC.cornerRadius = 15
+        popupVC.backgroundAlpha = 0.0
+        popupVC.backgroundColor = .clear
+        popupVC.canTapOutsideToDismiss = true
+        popupVC.shadowEnabled = true
+        popupVC.delegate = self
+        popupVC.modalPresentationStyle = .popover
+        self.present(popupVC, animated: true, completion: nil)
     }
     
 //     override func viewDidAppear(_ animated: Bool) {
@@ -33,11 +52,13 @@ class MapViewController: UIViewController {
 //    }
     
     func setRegionAndAnnotation(center: CLLocationCoordinate2D){
-        
-        
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(region, animated: true)
 
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.locationManager.stopUpdatingLocation()
+        
     }
 
 }
@@ -154,3 +175,41 @@ extension MapViewController: CLLocationManagerDelegate{
     }
     
 }
+
+extension MapViewController : PopupViewControllerDelegate, CustomPopupViewDelegate
+{
+    // MARK: Default Delegate Methods For Dismiss Popup
+    public func popupViewControllerDidDismissByTapGesture(_ sender: PopupViewController)
+    {
+        dismiss(animated: true)
+        {
+            debugPrint("Popup Dismiss")
+        }
+    }
+    
+    // MARK: Custom Delegate Methods For Dismiss Popup on Action
+    func customPopupViewExtension(sender: CustomPopupView, didSelectNumber: Int)
+    {
+        dismiss(animated: true)
+        {
+            if didSelectNumber == 1
+            {
+                self.btnShowPopup.setTitle("스피드", for: .normal)
+                self.num = 1
+            }
+            if didSelectNumber == 2
+            {
+                self.btnShowPopup.setTitle("거리", for: .normal)
+                self.num = 2
+            }
+            if didSelectNumber == 3
+            {
+                self.btnShowPopup.setTitle("시간", for: .normal)
+                self.num = 3
+            }
+            
+        }
+    }
+}
+
+

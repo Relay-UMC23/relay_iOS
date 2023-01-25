@@ -14,6 +14,9 @@
 		3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE68296C3F94009A8008 /* Assets.xcassets */; };
 		3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE6A296C3F94009A8008 /* LaunchScreen.storyboard */; };
 		3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */; };
+		3F7143F42981270E00FD26A5 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7143F32981270E00FD26A5 /* PopupViewController.swift */; };
+		3F7143F72981273600FD26A5 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7143F52981273600FD26A5 /* CustomPopupView.swift */; };
+		3F7143F82981273600FD26A5 /* CustomPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7143F62981273600FD26A5 /* CustomPopupView.xib */; };
 		3F96C3E8297E7F3300495EA7 /* Run.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F96C3E7297E7F3300495EA7 /* Run.storyboard */; };
 		3FA063E8298028750065935E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA063E7298028750065935E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,9 @@
 		3F34FE6B296C3F94009A8008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F34FE6D296C3F94009A8008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackMyTraceViewController.swift; path = ../TrackMyTraceViewController.swift; sourceTree = "<group>"; };
+		3F7143F32981270E00FD26A5 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		3F7143F52981273600FD26A5 /* CustomPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
+		3F7143F62981273600FD26A5 /* CustomPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopupView.xib; sourceTree = "<group>"; };
 		3F96C3E7297E7F3300495EA7 /* Run.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Run.storyboard; sourceTree = "<group>"; };
 		3FA063E7298028750065935E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +86,9 @@
 				3F34FE65296C3F93009A8008 /* Main.storyboard */,
 				3F96C3E7297E7F3300495EA7 /* Run.storyboard */,
 				3FA063E7298028750065935E /* MapViewController.swift */,
+				3F7143F32981270E00FD26A5 /* PopupViewController.swift */,
+				3F7143F52981273600FD26A5 /* CustomPopupView.swift */,
+				3F7143F62981273600FD26A5 /* CustomPopupView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7143F82981273600FD26A5 /* CustomPopupView.xib in Resources */,
 				3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */,
 				3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */,
 				3F96C3E8297E7F3300495EA7 /* Run.storyboard in Resources */,
@@ -158,9 +168,11 @@
 			files = (
 				3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */,
 				3F34FE64296C3F93009A8008 /* ViewController.swift in Sources */,
+				3F7143F72981273600FD26A5 /* CustomPopupView.swift in Sources */,
 				3F34FE60296C3F93009A8008 /* AppDelegate.swift in Sources */,
 				3FA063E8298028750065935E /* MapViewController.swift in Sources */,
 				3F34FE62296C3F93009A8008 /* SceneDelegate.swift in Sources */,
+				3F7143F42981270E00FD26A5 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
