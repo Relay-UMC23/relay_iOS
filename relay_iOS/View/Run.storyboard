@@ -29,6 +29,29 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWn-jF-WWH">
+                                <rect key="frame" x="158" y="564" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="0gc-Yb-Gz3"/>
+                                    <constraint firstAttribute="height" constant="75" id="1dq-Ur-IEn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="OdL-RA-U5C" kind="popoverPresentation" popoverAnchorView="gWn-jF-WWH" id="M7C-aK-Gi8">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MjW-67-2oG">
+                                <rect key="frame" x="75" y="114" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FfW-h4-uNp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -36,9 +59,12 @@
                             <constraint firstAttribute="bottom" secondItem="eTf-gu-trH" secondAttribute="bottomMargin" constant="83" id="3V2-dh-0ph"/>
                             <constraint firstItem="eTf-gu-trH" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="52x-db-tBs"/>
                             <constraint firstItem="WPP-gl-EzS" firstAttribute="leading" secondItem="FfW-h4-uNp" secondAttribute="leading" constant="158" id="9im-im-Pp1"/>
+                            <constraint firstItem="FfW-h4-uNp" firstAttribute="trailing" secondItem="gWn-jF-WWH" secondAttribute="trailing" constant="157" id="LHY-Kj-Ppa"/>
+                            <constraint firstItem="WPP-gl-EzS" firstAttribute="top" secondItem="gWn-jF-WWH" secondAttribute="bottom" constant="43" id="LhS-Xg-1dK"/>
                             <constraint firstItem="FfW-h4-uNp" firstAttribute="bottom" secondItem="WPP-gl-EzS" secondAttribute="bottom" constant="44" id="U3G-nE-yIw"/>
                             <constraint firstItem="FfW-h4-uNp" firstAttribute="trailing" secondItem="WPP-gl-EzS" secondAttribute="trailing" constant="157" id="icN-Aa-fhP"/>
                             <constraint firstItem="eTf-gu-trH" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="mBk-JE-keI"/>
+                            <constraint firstItem="gWn-jF-WWH" firstAttribute="leading" secondItem="FfW-h4-uNp" secondAttribute="leading" constant="158" id="upW-yO-gnv"/>
                             <constraint firstItem="eTf-gu-trH" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yjP-B2-Ocu"/>
                         </constraints>
                     </view>
@@ -47,15 +73,51 @@
                     <connections>
                         <outlet property="btnShowPopup" destination="WPP-gl-EzS" id="bOt-fY-Xjn"/>
                         <outlet property="mapView" destination="eTf-gu-trH" id="W8Q-7I-NkH"/>
+                        <outlet property="startButton" destination="gWn-jF-WWH" id="Bh6-4h-nGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73.84615384615384" y="-291.46919431279622"/>
+            <point key="canvasLocation" x="-303" y="-291"/>
+        </scene>
+        <!--Track My Trace View Controller-->
+        <scene sceneID="ehB-Hp-tTb">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="OdL-RA-U5C" customClass="TrackMyTraceViewController" customModule="relay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ihf-P1-G40">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIi-qp-aXt">
+                                <rect key="frame" x="16" y="0.0" width="358" height="738"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NXt-fi-Uvj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IIi-qp-aXt" firstAttribute="leading" secondItem="NXt-fi-Uvj" secondAttribute="leading" constant="16" id="5Vs-jM-Pl8"/>
+                            <constraint firstItem="IIi-qp-aXt" firstAttribute="top" secondItem="NXt-fi-Uvj" secondAttribute="top" id="Akh-n9-1oO"/>
+                            <constraint firstItem="IIi-qp-aXt" firstAttribute="bottom" secondItem="NXt-fi-Uvj" secondAttribute="bottom" id="BHL-pY-NQ6"/>
+                            <constraint firstItem="NXt-fi-Uvj" firstAttribute="trailing" secondItem="IIi-qp-aXt" secondAttribute="trailing" constant="16" id="heM-Q6-pO3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7gw-5X-zru"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="MapView" destination="IIi-qp-aXt" id="5CU-Uh-vvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9S-Mw-2fe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="-291"/>
         </scene>
     </scenes>
     <resources>
         <image name="figure.run" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

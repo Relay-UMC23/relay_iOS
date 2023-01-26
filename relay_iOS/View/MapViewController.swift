@@ -7,6 +7,7 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var btnShowPopup: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     var num : Int = 0
@@ -22,7 +23,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnShowPopup.setTitle("시간", for: .normal)
+        startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
+        startButton.clipsToBounds = true
+        btnShowPopup.setTitle("목표 설정", for: .normal)
         btnShowPopup.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
         self.mapView.mapType = MKMapType.standard
         mapView.showsUserLocation = true
