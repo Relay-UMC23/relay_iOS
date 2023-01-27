@@ -3,43 +3,11 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Track My Trace View Controller-->
-        <scene sceneID="7bU-SO-h0S">
-            <objects>
-                <viewController id="lPm-9a-ilm" customClass="TrackMyTraceViewController" customModule="relay_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TDd-3O-w53">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKi-aa-HNa">
-                                <rect key="frame" x="16" y="47" width="358" height="714"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dPj-nr-hpd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="qKi-aa-HNa" firstAttribute="top" secondItem="dPj-nr-hpd" secondAttribute="top" id="TE0-zz-swd"/>
-                            <constraint firstItem="qKi-aa-HNa" firstAttribute="leading" secondItem="dPj-nr-hpd" secondAttribute="leading" constant="16" id="X67-dg-JO2"/>
-                            <constraint firstItem="dPj-nr-hpd" firstAttribute="trailing" secondItem="qKi-aa-HNa" secondAttribute="trailing" constant="16" id="YLk-Jy-P2e"/>
-                            <constraint firstItem="qKi-aa-HNa" firstAttribute="bottom" secondItem="dPj-nr-hpd" secondAttribute="bottom" id="ofg-e3-cPu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="qea-IC-tW3"/>
-                    <connections>
-                        <outlet property="MapView" destination="qKi-aa-HNa" id="VGV-QJ-5kc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ku-Ye-otb" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3572" y="868"/>
-        </scene>
         <!--마이페이지-->
         <scene sceneID="DKP-z8-7X0">
             <objects>
@@ -68,7 +36,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="r3Z-ZO-0jb" kind="relationship" relationship="viewControllers" id="ow7-eJ-HQw"/>
-                        <segue destination="JEg-ap-fxs" kind="relationship" relationship="viewControllers" id="nnz-Oj-Tll"/>
+                        <segue destination="dA9-Ca-a4u" kind="relationship" relationship="viewControllers" id="rFF-4t-DD3"/>
                         <segue destination="Fdy-lE-Zsn" kind="relationship" relationship="viewControllers" id="fa9-tJ-poN"/>
                         <segue destination="rjc-C5-KuA" kind="relationship" relationship="viewControllers" id="1op-MN-7Md"/>
                     </connections>
@@ -110,64 +78,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moL-JM-o4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2018" y="-599"/>
-        </scene>
-        <!--러닝-->
-        <scene sceneID="XDc-xE-Y28">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="JEg-ap-fxs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="러닝" image="figure.run" catalog="system" id="JjF-i8-oSh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9zA-u1-Ens">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="TyS-kX-XMG" kind="relationship" relationship="rootViewController" id="5xo-2V-cH5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XKi-ui-neV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3571" y="-599"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fok-x6-fdW">
-            <objects>
-                <viewController id="TyS-kX-XMG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wa8-Lt-kfn">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUs-i2-99H">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPF-Ps-T4d">
-                                <rect key="frame" x="158" y="656" width="75" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="x3E-KU-pDW"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="lPm-9a-ilm" kind="show" id="rbm-kj-0Js"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="oeq-TG-cHC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tUs-i2-99H" firstAttribute="leading" secondItem="oeq-TG-cHC" secondAttribute="leading" id="0KF-PI-lUO"/>
-                            <constraint firstItem="tUs-i2-99H" firstAttribute="top" secondItem="oeq-TG-cHC" secondAttribute="top" id="IaL-k1-jwZ"/>
-                            <constraint firstItem="oeq-TG-cHC" firstAttribute="bottom" secondItem="BPF-Ps-T4d" secondAttribute="bottom" constant="70" id="NTn-Eq-6P8"/>
-                            <constraint firstItem="oeq-TG-cHC" firstAttribute="bottom" secondItem="tUs-i2-99H" secondAttribute="bottom" id="ZLd-b6-a9u"/>
-                            <constraint firstItem="oeq-TG-cHC" firstAttribute="trailing" secondItem="BPF-Ps-T4d" secondAttribute="trailing" constant="157" id="c1Z-x6-fok"/>
-                            <constraint firstItem="BPF-Ps-T4d" firstAttribute="leading" secondItem="oeq-TG-cHC" secondAttribute="leading" constant="158" id="oOD-dA-q7U"/>
-                            <constraint firstItem="oeq-TG-cHC" firstAttribute="trailing" secondItem="tUs-i2-99H" secondAttribute="trailing" id="pIl-oy-UB9"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="F6N-ZX-5tl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sss-N6-jDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3572.3076923076924" y="122.98578199052132"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aKn-MV-cbw">
@@ -217,10 +127,19 @@
             </objects>
             <point key="canvasLocation" x="-2018" y="141"/>
         </scene>
+        <!--RunViewController-->
+        <scene sceneID="edG-ZG-oT8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Run" referencedIdentifier="RunViewController" id="dA9-Ca-a4u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Y9g-jN-yWQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dy-8h-KmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3572" y="-783"/>
+        </scene>
     </scenes>
     <resources>
         <image name="checkerboard.rectangle" catalog="system" width="128" height="93"/>
-        <image name="figure.run" catalog="system" width="115" height="128"/>
         <image name="person.2" catalog="system" width="128" height="82"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
