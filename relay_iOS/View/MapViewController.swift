@@ -6,7 +6,8 @@ import CoreLocation
 // 중심, 범위 지정, 핀(어노테이션)
 
 class MapViewController: UIViewController, MKMapViewDelegate {
-
+    
+    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var btnShowPopup: UIButton!
     @IBOutlet weak var mapView: MKMapView!
@@ -25,30 +26,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
         startButton.clipsToBounds = true
-        btnShowPopup.setTitle("목표 설정", for: .normal)
-        btnShowPopup.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
         self.mapView.mapType = MKMapType.standard
         mapView.showsUserLocation = true
         self.mapView.setUserTrackingMode(.follow, animated: true)
         self.mapView.isZoomEnabled = true
         self.mapView.delegate = self
         
+        
     }
-    @objc func showPopup() {
-        guard let popupViewController = CustomPopupView.instantiate() else { return }
-        popupViewController.delegate = self
-        popupViewController.rnum = num
-        let popupVC = PopupViewController(contentController: popupViewController, position: .bottom(0), popupWidth: self.view.frame.width, popupHeight: 300)
-        popupVC.cornerRadius = 15
-        popupVC.backgroundAlpha = 0.0
-        popupVC.backgroundColor = .clear
-        popupVC.canTapOutsideToDismiss = true
-        popupVC.shadowEnabled = true
-        popupVC.delegate = self
-        popupVC.modalPresentationStyle = .popover
-        self.present(popupVC, animated: true, completion: nil)
-    }
-    
+
 //     override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidDisappear(animated)
 //        showRequestLocationServiceAlert()
@@ -145,8 +131,6 @@ extension MapViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(#function, locations)
         
-        //ex. 위도경도 기반 날씨 조회
-        //ex. 지도 다시 세팅
         if let coordinate = locations.last?.coordinate{
             setRegionAndAnnotation(center: coordinate)
 //            let latitude = coordinate.latitude
@@ -178,41 +162,4 @@ extension MapViewController: CLLocationManagerDelegate{
     }
     
 }
-
-extension MapViewController : PopupViewControllerDelegate, CustomPopupViewDelegate
-{
-    // MARK: Default Delegate Methods For Dismiss Popup
-    public func popupViewControllerDidDismissByTapGesture(_ sender: PopupViewController)
-    {
-        dismiss(animated: true)
-        {
-            debugPrint("Popup Dismiss")
-        }
-    }
-    
-    // MARK: Custom Delegate Methods For Dismiss Popup on Action
-    func customPopupViewExtension(sender: CustomPopupView, didSelectNumber: Int)
-    {
-        dismiss(animated: true)
-        {
-            if didSelectNumber == 1
-            {
-                self.btnShowPopup.setTitle("스피드", for: .normal)
-                self.num = 1
-            }
-            if didSelectNumber == 2
-            {
-                self.btnShowPopup.setTitle("거리", for: .normal)
-                self.num = 2
-            }
-            if didSelectNumber == 3
-            {
-                self.btnShowPopup.setTitle("시간", for: .normal)
-                self.num = 3
-            }
-            
-        }
-    }
-}
-
 

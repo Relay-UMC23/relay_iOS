@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U0n-re-94R">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Time Table View Controller-->
+        <scene sceneID="C7B-2a-hCD">
+            <objects>
+                <viewController id="44g-kS-Qm8" customClass="TimeTableViewController" customModule="relay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BJp-Qy-px6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGg-gB-VTf" customClass="Elliotable" customModule="Elliotable">
+                                <rect key="frame" x="15" y="168" width="360" height="657"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="657" id="Onh-gd-igM"/>
+                                    <constraint firstAttribute="width" constant="360" id="ylG-jM-G7T"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjQ-zS-cs0">
+                                <rect key="frame" x="16" y="91" width="38" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="acQ-ye-r2f"/>
+                                    <constraint firstAttribute="width" constant="38" id="rMq-Yy-8ee"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="&lt;">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="22" name="NanumMyeongjoExtraBold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="츌이 팀 시간표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-9h-9JW">
+                                <rect key="frame" x="133" y="116" width="124" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="11J-lY-pis"/>
+                                    <constraint firstAttribute="width" constant="124" id="yO8-uO-uaA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6NV-y6-rO5"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RGg-gB-VTf" firstAttribute="centerX" secondItem="6NV-y6-rO5" secondAttribute="centerX" id="7iN-OE-i7u"/>
+                            <constraint firstItem="NSu-9h-9JW" firstAttribute="top" secondItem="6NV-y6-rO5" secondAttribute="top" constant="25" id="Fu2-sy-Kky"/>
+                            <constraint firstItem="RGg-gB-VTf" firstAttribute="top" secondItem="NSu-9h-9JW" secondAttribute="bottom" constant="25" id="hwe-a7-leB"/>
+                            <constraint firstItem="NSu-9h-9JW" firstAttribute="centerX" secondItem="6NV-y6-rO5" secondAttribute="centerX" id="obu-qg-syJ"/>
+                            <constraint firstItem="KjQ-zS-cs0" firstAttribute="leading" secondItem="6NV-y6-rO5" secondAttribute="leading" constant="16" id="t5k-Af-HiP"/>
+                            <constraint firstItem="KjQ-zS-cs0" firstAttribute="top" secondItem="6NV-y6-rO5" secondAttribute="top" id="weA-vm-uvi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kog-2w-n5I"/>
+                    <connections>
+                        <outlet property="elliotable" destination="RGg-gB-VTf" id="zxC-4y-P2p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMK-eh-ZYw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="-121"/>
+        </scene>
+        <!--시간표-->
+        <scene sceneID="jV2-21-SfS">
+            <objects>
+                <navigationController id="U0n-re-94R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="시간표" image="checkerboard.rectangle" catalog="system" id="ZBF-QO-kNt"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NQq-bo-BTc">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="44g-kS-Qm8" kind="relationship" relationship="rootViewController" id="4oS-Jt-aEx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeT-7M-yae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="-122"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkerboard.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

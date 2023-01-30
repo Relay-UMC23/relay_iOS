@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FFC41B164E81AAF1C28355E /* Pods_relay_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB6773F7D0F4624F3A41BB7 /* Pods_relay_iOS.framework */; };
+		3F26256F2988132400B042F3 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26256E2988132400B042F3 /* TimeTableViewController.swift */; };
 		3F34FE60296C3F93009A8008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34FE5F296C3F93009A8008 /* AppDelegate.swift */; };
 		3F34FE62296C3F93009A8008 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34FE61296C3F93009A8008 /* SceneDelegate.swift */; };
 		3F34FE64296C3F93009A8008 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34FE63296C3F93009A8008 /* ViewController.swift */; };
@@ -14,14 +16,18 @@
 		3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE68296C3F94009A8008 /* Assets.xcassets */; };
 		3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE6A296C3F94009A8008 /* LaunchScreen.storyboard */; };
 		3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */; };
-		3F7143F42981270E00FD26A5 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7143F32981270E00FD26A5 /* PopupViewController.swift */; };
-		3F7143F72981273600FD26A5 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7143F52981273600FD26A5 /* CustomPopupView.swift */; };
-		3F7143F82981273600FD26A5 /* CustomPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7143F62981273600FD26A5 /* CustomPopupView.xib */; };
 		3F96C3E8297E7F3300495EA7 /* Run.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F96C3E7297E7F3300495EA7 /* Run.storyboard */; };
 		3FA063E8298028750065935E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA063E7298028750065935E /* MapViewController.swift */; };
+		3FF10D722987DE50002D9544 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF10D712987DE50002D9544 /* Personal.storyboard */; };
+		3FF10D742987DE77002D9544 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF10D732987DE77002D9544 /* TimeTable.storyboard */; };
+		3FF10D762987DEFB002D9544 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF10D752987DEFB002D9544 /* Group.storyboard */; };
+		3FF10D782987DFD7002D9544 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF10D772987DFD7002D9544 /* GroupViewController.swift */; };
+		3FF10D7A2987E0AF002D9544 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF10D792987E0AF002D9544 /* PersonalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D3DC7C9C08B1CB9380A33D7 /* Pods-relay_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-relay_iOS.release.xcconfig"; path = "Target Support Files/Pods-relay_iOS/Pods-relay_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3F26256E2988132400B042F3 /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		3F34FE5C296C3F93009A8008 /* relay_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = relay_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F34FE5F296C3F93009A8008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F34FE61296C3F93009A8008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,11 +37,15 @@
 		3F34FE6B296C3F94009A8008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F34FE6D296C3F94009A8008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackMyTraceViewController.swift; path = ../TrackMyTraceViewController.swift; sourceTree = "<group>"; };
-		3F7143F32981270E00FD26A5 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
-		3F7143F52981273600FD26A5 /* CustomPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
-		3F7143F62981273600FD26A5 /* CustomPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopupView.xib; sourceTree = "<group>"; };
 		3F96C3E7297E7F3300495EA7 /* Run.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Run.storyboard; sourceTree = "<group>"; };
 		3FA063E7298028750065935E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3FF10D712987DE50002D9544 /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
+		3FF10D732987DE77002D9544 /* TimeTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
+		3FF10D752987DEFB002D9544 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
+		3FF10D772987DFD7002D9544 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		3FF10D792987E0AF002D9544 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		4FC5D19FF323D46B39B03072 /* Pods-relay_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-relay_iOS.debug.xcconfig"; path = "Target Support Files/Pods-relay_iOS/Pods-relay_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9DB6773F7D0F4624F3A41BB7 /* Pods_relay_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_relay_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFC41B164E81AAF1C28355E /* Pods_relay_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +65,8 @@
 			children = (
 				3F34FE5E296C3F93009A8008 /* relay_iOS */,
 				3F34FE5D296C3F93009A8008 /* Products */,
+				EFB0D74CEFCD057DF3A3E16B /* Pods */,
+				971109C7CF2A88B3E454D3CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,13 +97,34 @@
 			isa = PBXGroup;
 			children = (
 				3F34FE65296C3F93009A8008 /* Main.storyboard */,
+				3FF10D752987DEFB002D9544 /* Group.storyboard */,
+				3FF10D712987DE50002D9544 /* Personal.storyboard */,
+				3FF10D792987E0AF002D9544 /* PersonalViewController.swift */,
+				3FF10D732987DE77002D9544 /* TimeTable.storyboard */,
 				3F96C3E7297E7F3300495EA7 /* Run.storyboard */,
 				3FA063E7298028750065935E /* MapViewController.swift */,
-				3F7143F32981270E00FD26A5 /* PopupViewController.swift */,
-				3F7143F52981273600FD26A5 /* CustomPopupView.swift */,
-				3F7143F62981273600FD26A5 /* CustomPopupView.xib */,
+				3FF10D772987DFD7002D9544 /* GroupViewController.swift */,
+				3F26256E2988132400B042F3 /* TimeTableViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		971109C7CF2A88B3E454D3CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DB6773F7D0F4624F3A41BB7 /* Pods_relay_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFB0D74CEFCD057DF3A3E16B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FC5D19FF323D46B39B03072 /* Pods-relay_iOS.debug.xcconfig */,
+				2D3DC7C9C08B1CB9380A33D7 /* Pods-relay_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F34FE70296C3F94009A8008 /* Build configuration list for PBXNativeTarget "relay_iOS" */;
 			buildPhases = (
+				89B15C724EE1A30F56547314 /* [CP] Check Pods Manifest.lock */,
 				3F34FE58296C3F93009A8008 /* Sources */,
 				3F34FE59296C3F93009A8008 /* Frameworks */,
 				3F34FE5A296C3F93009A8008 /* Resources */,
+				3AAD2A5658B926B81D364EE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,7 +165,7 @@
 				};
 			};
 			buildConfigurationList = 3F34FE57296C3F93009A8008 /* Build configuration list for PBXProject "relay_iOS" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -151,28 +187,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7143F82981273600FD26A5 /* CustomPopupView.xib in Resources */,
 				3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */,
+				3FF10D742987DE77002D9544 /* TimeTable.storyboard in Resources */,
 				3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */,
+				3FF10D762987DEFB002D9544 /* Group.storyboard in Resources */,
 				3F96C3E8297E7F3300495EA7 /* Run.storyboard in Resources */,
+				3FF10D722987DE50002D9544 /* Personal.storyboard in Resources */,
 				3F34FE67296C3F93009A8008 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AAD2A5658B926B81D364EE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-relay_iOS/Pods-relay_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-relay_iOS/Pods-relay_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-relay_iOS/Pods-relay_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89B15C724EE1A30F56547314 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-relay_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F34FE58296C3F93009A8008 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF10D782987DFD7002D9544 /* GroupViewController.swift in Sources */,
 				3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */,
 				3F34FE64296C3F93009A8008 /* ViewController.swift in Sources */,
-				3F7143F72981273600FD26A5 /* CustomPopupView.swift in Sources */,
+				3FF10D7A2987E0AF002D9544 /* PersonalViewController.swift in Sources */,
 				3F34FE60296C3F93009A8008 /* AppDelegate.swift in Sources */,
 				3FA063E8298028750065935E /* MapViewController.swift in Sources */,
+				3F26256F2988132400B042F3 /* TimeTableViewController.swift in Sources */,
 				3F34FE62296C3F93009A8008 /* SceneDelegate.swift in Sources */,
-				3F7143F42981270E00FD26A5 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +395,7 @@
 		};
 		3F34FE71296C3F94009A8008 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FC5D19FF323D46B39B03072 /* Pods-relay_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,6 +423,7 @@
 		};
 		3F34FE72296C3F94009A8008 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3DC7C9C08B1CB9380A33D7 /* Pods-relay_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
