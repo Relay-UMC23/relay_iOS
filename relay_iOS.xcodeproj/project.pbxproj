@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FFC41B164E81AAF1C28355E /* Pods_relay_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB6773F7D0F4624F3A41BB7 /* Pods_relay_iOS.framework */; };
+		3F0426ED299C9BDF008F055C /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0426EC299C9BDF008F055C /* SViewController.swift */; };
 		3F26256F2988132400B042F3 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26256E2988132400B042F3 /* TimeTableViewController.swift */; };
 		3F34FE60296C3F93009A8008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34FE5F296C3F93009A8008 /* AppDelegate.swift */; };
 		3F34FE62296C3F93009A8008 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34FE61296C3F93009A8008 /* SceneDelegate.swift */; };
@@ -15,18 +16,21 @@
 		3F34FE67296C3F93009A8008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE65296C3F93009A8008 /* Main.storyboard */; };
 		3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE68296C3F94009A8008 /* Assets.xcassets */; };
 		3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34FE6A296C3F94009A8008 /* LaunchScreen.storyboard */; };
+		3F54950A299C9A6200DA8CC8 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F549509299C9A6200DA8CC8 /* GroupViewController.swift */; };
 		3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */; };
 		3F96C3E8297E7F3300495EA7 /* Run.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F96C3E7297E7F3300495EA7 /* Run.storyboard */; };
 		3FA063E8298028750065935E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA063E7298028750065935E /* MapViewController.swift */; };
 		3FF10D722987DE50002D9544 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF10D712987DE50002D9544 /* Personal.storyboard */; };
 		3FF10D742987DE77002D9544 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF10D732987DE77002D9544 /* TimeTable.storyboard */; };
 		3FF10D762987DEFB002D9544 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF10D752987DEFB002D9544 /* Group.storyboard */; };
-		3FF10D782987DFD7002D9544 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF10D772987DFD7002D9544 /* GroupViewController.swift */; };
 		3FF10D7A2987E0AF002D9544 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF10D792987E0AF002D9544 /* PersonalViewController.swift */; };
+		3FFEC0A3299C919500D22477 /* popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFEC0A2299C919500D22477 /* popup.storyboard */; };
+		3FFEC0A5299C919C00D22477 /* popupviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFEC0A4299C919C00D22477 /* popupviewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D3DC7C9C08B1CB9380A33D7 /* Pods-relay_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-relay_iOS.release.xcconfig"; path = "Target Support Files/Pods-relay_iOS/Pods-relay_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3F0426EC299C9BDF008F055C /* SViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
 		3F26256E2988132400B042F3 /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		3F34FE5C296C3F93009A8008 /* relay_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = relay_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F34FE5F296C3F93009A8008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,14 +40,16 @@
 		3F34FE68296C3F94009A8008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F34FE6B296C3F94009A8008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F34FE6D296C3F94009A8008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F549509299C9A6200DA8CC8 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		3F6EDA62297D929A00EBA08E /* TrackMyTraceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackMyTraceViewController.swift; path = ../TrackMyTraceViewController.swift; sourceTree = "<group>"; };
 		3F96C3E7297E7F3300495EA7 /* Run.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Run.storyboard; sourceTree = "<group>"; };
 		3FA063E7298028750065935E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3FF10D712987DE50002D9544 /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		3FF10D732987DE77002D9544 /* TimeTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		3FF10D752987DEFB002D9544 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
-		3FF10D772987DFD7002D9544 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		3FF10D792987E0AF002D9544 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		3FFEC0A2299C919500D22477 /* popup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = popup.storyboard; sourceTree = "<group>"; };
+		3FFEC0A4299C919C00D22477 /* popupviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popupviewcontroller.swift; sourceTree = "<group>"; };
 		4FC5D19FF323D46B39B03072 /* Pods-relay_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-relay_iOS.debug.xcconfig"; path = "Target Support Files/Pods-relay_iOS/Pods-relay_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9DB6773F7D0F4624F3A41BB7 /* Pods_relay_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_relay_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,12 +104,15 @@
 			children = (
 				3F34FE65296C3F93009A8008 /* Main.storyboard */,
 				3FF10D752987DEFB002D9544 /* Group.storyboard */,
+				3F0426EC299C9BDF008F055C /* SViewController.swift */,
+				3F549509299C9A6200DA8CC8 /* GroupViewController.swift */,
+				3FFEC0A4299C919C00D22477 /* popupviewcontroller.swift */,
 				3FF10D712987DE50002D9544 /* Personal.storyboard */,
+				3FFEC0A2299C919500D22477 /* popup.storyboard */,
 				3FF10D792987E0AF002D9544 /* PersonalViewController.swift */,
 				3FF10D732987DE77002D9544 /* TimeTable.storyboard */,
 				3F96C3E7297E7F3300495EA7 /* Run.storyboard */,
 				3FA063E7298028750065935E /* MapViewController.swift */,
-				3FF10D772987DFD7002D9544 /* GroupViewController.swift */,
 				3F26256E2988132400B042F3 /* TimeTableViewController.swift */,
 			);
 			path = View;
@@ -123,7 +132,6 @@
 				4FC5D19FF323D46B39B03072 /* Pods-relay_iOS.debug.xcconfig */,
 				2D3DC7C9C08B1CB9380A33D7 /* Pods-relay_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,6 +198,7 @@
 				3F34FE6C296C3F94009A8008 /* LaunchScreen.storyboard in Resources */,
 				3FF10D742987DE77002D9544 /* TimeTable.storyboard in Resources */,
 				3F34FE69296C3F94009A8008 /* Assets.xcassets in Resources */,
+				3FFEC0A3299C919500D22477 /* popup.storyboard in Resources */,
 				3FF10D762987DEFB002D9544 /* Group.storyboard in Resources */,
 				3F96C3E8297E7F3300495EA7 /* Run.storyboard in Resources */,
 				3FF10D722987DE50002D9544 /* Personal.storyboard in Resources */,
@@ -246,12 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF10D782987DFD7002D9544 /* GroupViewController.swift in Sources */,
+				3F54950A299C9A6200DA8CC8 /* GroupViewController.swift in Sources */,
 				3F6EDA63297D929A00EBA08E /* TrackMyTraceViewController.swift in Sources */,
+				3FFEC0A5299C919C00D22477 /* popupviewcontroller.swift in Sources */,
 				3F34FE64296C3F93009A8008 /* ViewController.swift in Sources */,
 				3FF10D7A2987E0AF002D9544 /* PersonalViewController.swift in Sources */,
 				3F34FE60296C3F93009A8008 /* AppDelegate.swift in Sources */,
 				3FA063E8298028750065935E /* MapViewController.swift in Sources */,
+				3F0426ED299C9BDF008F055C /* SViewController.swift in Sources */,
 				3F26256F2988132400B042F3 /* TimeTableViewController.swift in Sources */,
 				3F34FE62296C3F93009A8008 /* SceneDelegate.swift in Sources */,
 			);

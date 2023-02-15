@@ -29,7 +29,7 @@ class TrackMyTraceViewController: UIViewController {
         goalView.layer.cornerRadius = 30
         currentrunView.layer.cornerRadius = 30
         var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: locationManager.location?.coordinate.latitude ?? 0, longitude: locationManager.location?.coordinate.longitude ?? 0)
-        self.totalDistance = 0
+
         getLocationUsagePermission()
         // xcode 종료 후 어플을 다시 실행했을 때 뜨는 오류 방지.
         self.MapView.setRegion(MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)), animated: true)
@@ -92,11 +92,10 @@ extension TrackMyTraceViewController: CLLocationManagerDelegate {
         let distanceFormatter = MKDistanceFormatter()
         distanceFormatter.units = .metric
         let addedDistance = loc1.distance(from: loc2)
-        debugPrint(Distance)
-        debugPrint(addedDistance)
         let lineDraw = MKPolyline(coordinates: points, count:points.count)
         self.MapView.addOverlay(lineDraw)
         self.Distance += addedDistance
+        debugPrint(Distance)
         let stringDistance = distanceFormatter.string(fromDistance: totalDistance)
 
         self.previousCoordinate = location.coordinate

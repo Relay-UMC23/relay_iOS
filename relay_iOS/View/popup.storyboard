@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popupviewcontroller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="alertpopupvc" id="Y6W-OH-hqX" customClass="popupviewcontroller" customModule="new" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ht-YW-Mys" userLabel="contentView">
+                                <rect key="frame" x="30" y="350" width="330" height="144"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정말 그룹을 탈퇴 하시겠습니까?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-2G-2zU">
+                                        <rect key="frame" x="16" y="27" width="299" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="299" id="PSi-ha-0BY"/>
+                                            <constraint firstAttribute="height" constant="29" id="dQ5-9W-0qh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guf-H5-mcx">
+                                        <rect key="frame" x="45" y="90" width="77" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="7xg-hc-6UX"/>
+                                            <constraint firstAttribute="width" constant="77" id="z7C-Ih-N7i"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="취소">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cancelclicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h3f-bi-WSW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjA-in-lQe">
+                                        <rect key="frame" x="189" y="90" width="93" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="RML-J2-X5V"/>
+                                            <constraint firstAttribute="width" constant="93" id="a9Q-Im-wSE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="탈퇴하기">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qSH-2G-2zU" firstAttribute="leading" secondItem="1ht-YW-Mys" secondAttribute="leading" constant="16" id="0hy-zj-JTb"/>
+                                    <constraint firstItem="Guf-H5-mcx" firstAttribute="top" secondItem="qSH-2G-2zU" secondAttribute="bottom" constant="34" id="B8R-KO-JTR"/>
+                                    <constraint firstItem="Guf-H5-mcx" firstAttribute="leading" secondItem="1ht-YW-Mys" secondAttribute="leading" constant="45" id="CvZ-P7-nuf"/>
+                                    <constraint firstAttribute="width" constant="330" id="Stt-4i-3oj"/>
+                                    <constraint firstAttribute="trailing" secondItem="qjA-in-lQe" secondAttribute="trailing" constant="48" id="TM8-Rf-oG1"/>
+                                    <constraint firstAttribute="height" constant="144" id="bL9-MN-4il"/>
+                                    <constraint firstItem="qSH-2G-2zU" firstAttribute="top" secondItem="1ht-YW-Mys" secondAttribute="top" constant="27" id="cEm-Zm-2Eq"/>
+                                    <constraint firstItem="qjA-in-lQe" firstAttribute="top" secondItem="qSH-2G-2zU" secondAttribute="bottom" constant="34" id="gDd-mq-t0R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1ht-YW-Mys" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="AVV-qp-a76"/>
+                            <constraint firstItem="1ht-YW-Mys" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DvM-iZ-nHY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="Guf-H5-mcx" id="p0I-08-grF"/>
+                        <outlet property="contentView" destination="1ht-YW-Mys" id="4k8-Vm-9TC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
