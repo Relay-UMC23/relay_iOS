@@ -514,6 +514,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelbutton:" destination="X9S-92-Tlg" eventType="touchUpInside" id="9VJ-Iw-EjM"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-01-18 오후 12.55.08" translatesAutoresizingMaskIntoConstraints="NO" id="v28-PM-eRJ">
                                 <rect key="frame" x="87" y="96" width="216" height="128"/>
@@ -618,6 +621,7 @@
                     <navigationItem key="navigationItem" id="BGL-Lt-xYh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQ6-W5-07H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="X9S-92-Tlg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3122" y="63"/>
         </scene>
