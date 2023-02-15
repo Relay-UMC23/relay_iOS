@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303" y="-291"/>
+            <point key="canvasLocation" x="-303.07692307692309" y="-291.46919431279622"/>
         </scene>
         <!--Track My Trace View Controller-->
         <scene sceneID="ehB-Hp-tTb">
@@ -205,6 +205,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="viewfinder" catalog="system" title=""/>
+                                        <connections>
+                                            <segue destination="uLb-4I-aFU" kind="show" id="d8Z-dE-1Uh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,13 +233,30 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MapView" destination="IIi-qp-aXt" id="5CU-Uh-vvY"/>
-                        <outlet property="currentrunView" destination="Atf-Rr-jce" id="FMB-uY-R7y"/>
+                        <outlet property="currentrunView" destination="Atf-Rr-jce" id="EXi-3O-1AE"/>
                         <outlet property="goalView" destination="uv6-3H-I7i" id="Z6N-2B-rs1"/>
+                        <outlet property="timerlabel" destination="EyL-sb-ckM" id="vDV-2L-Jvv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9S-Mw-2fe" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507.69230769230768" y="-291.46919431279622"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bAE-Vy-mHA">
+            <objects>
+                <viewController id="uLb-4I-aFU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="onr-55-ic4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AO4-Ns-67G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qZp-Rz-zeU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJA-Lx-odw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="-291"/>
         </scene>
     </scenes>
     <resources>

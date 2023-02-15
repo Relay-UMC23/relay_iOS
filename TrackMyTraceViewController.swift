@@ -8,7 +8,14 @@ import CoreMotion
 class TrackMyTraceViewController: UIViewController {
     @IBOutlet weak var goalView: UIView!
     
-    @IBOutlet weak var currentrunView: UIView!
+    
+    @IBOutlet var timerlabel: UILabel!
+    var timer:Timer = Timer()
+    var count:Int = 0
+    var timerCounting:Bool = false
+    
+    @IBOutlet var currentrunView: UIView!
+    
     @IBOutlet weak var MapView: MKMapView!
     var points: [CLLocationCoordinate2D] = []
     @IBOutlet weak var distanceLabel: UILabel!
